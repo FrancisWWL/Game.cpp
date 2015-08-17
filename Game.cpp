@@ -18,8 +18,10 @@ double	g_dDeltaTime;
 bool	g_abKeyPressed[K_COUNT];
 COORD	g_cConsoleSize;
 
-/p1 data
+//p1 data
 int p1heart;p1coordx;p1coordy;
+//p2 data
+int p2heart;p2coordx;p2coordy;
 
 //bullet(20)
 int b1directx;b1directy;b1coordx;b1coordy;
@@ -127,9 +129,10 @@ void init( void )
     g_cConsoleSize.X = csbi.srWindow.Right + 1;
     g_cConsoleSize.Y = csbi.srWindow.Bottom + 1;
 
-    // set the character to be in the center of the screen.
-    g_cCharLocation.X = g_cConsoleSize.X / 2;
-    g_cCharLocation.Y = g_cConsoleSize.Y / 2;
+   p1coordx = 10; 
+   p1coordy = 10;
+    p2coordx = 11;
+    p2coordy = 11;
 
     g_dElapsedTime = 0.0;
 }
