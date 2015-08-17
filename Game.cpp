@@ -68,11 +68,13 @@ void shutdown( void )
 //--------------------------------------------------------------
 void getInput( void )
 {    
-    g_abKeyPressed[K_UP] = isKeyPressed(VK_UP);
-    g_abKeyPressed[K_DOWN] = isKeyPressed(VK_DOWN);
-    g_abKeyPressed[K_LEFT] = isKeyPressed(VK_LEFT);
-    g_abKeyPressed[K_RIGHT] = isKeyPressed(VK_RIGHT);
-    g_abKeyPressed[K_ESCAPE] = isKeyPressed(VK_ESCAPE);
+   	g_abKeyPressed[0x57] = isKeyPressed(0x57); //W --> Up 
+	g_abKeyPressed[0x41] = isKeyPressed(0x41); //A --> Left
+	g_abKeyPressed[0x53] = isKeyPressed(0x53); //S --> Down
+	g_abKeyPressed[0x44] = isKeyPressed(0x44); //D --> Right
+	g_abKeyPressed[0x4A] = isKeyPressed(0x4A); //J --> Shoot
+	g_abKeyPressed[0x4B] = isKeyPressed(0x4B); //K --> Item
+	g_abKeyPressed[0x4C] = isKeyPressed(0x4C); //L --> Bomb
 }
 
 //--------------------------------------------------------------
