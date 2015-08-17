@@ -231,6 +231,60 @@ void update(double dt)
     {
 		p1coordx++;
     }
+    
+    
+    //shooting p1
+    
+
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b1bullet == false)
+		{
+
+		}
+		else if (b2bullet == false)
+		{
+
+		}
+		else if (b3bullet == false)
+		{
+
+		}
+		else if (b4bullet == false)
+		{
+
+		}
+		else if (b5bullet == false)
+		{
+
+		}
+		else if (b6bullet == false)
+		{
+
+		}
+		else if (b7bullet == false)
+		{
+
+		}
+		else if (b8bullet == false)
+		{
+
+		}
+		else if (b9bullet == false)
+		{
+
+		}
+		else if (b10bullet == false)
+		{
+
+		}
+		else
+		{
+			//no effects
+		}
+	}
+	
+	
 
 	//Player 2
 	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
@@ -250,120 +304,57 @@ void update(double dt)
 		p2coordx++;
 	} 
     }
+
+
+//shooting p2
 if (g_abKeyPressed[0x56])	//V --> Shoot
 	{
-		if (b1bullet == false)
+		if (b11bullet == false)
 		{
 
 		}
-		else if (b1bullet == false)
+		else if (b12bullet == false)
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b2bullet == false)
+		else if (b13bullet == false)
 		{
 
 		}
-		else if (b2bullet == false)
+		else if (b14bullet == false)
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b3bullet == false)
+		else if (b15bullet == false)
 		{
 
 		}
-		else if (b3bullet == false)
+		else if (b16bullet == false)
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b4bullet == false)
+		else if (b17bullet == false)
 		{
 
 		}
-		else if (b4bullet == false)
+		else if (b18bullet == false)
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b5bullet == false)
+		else if (b19bullet == false)
 		{
 
 		}
-		else if (b5bullet == false)
+		else if (b20bullet == false)
 		{
 
+		}
+		else
+		{
+			//no effects
 		}
 	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b6bullet == false)
-		{
 
-		}
-		else if (b6bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b7bullet == false)
-		{
-
-		}
-		else if (b7bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b8bullet == false)
-		{
-
-		}
-		else if (b8bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b9bullet == false)
-		{
-
-		}
-		else if (b9bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b10bullet == false)
-		{
-
-		}
-		else if (b10bullet == false)
-		{
-
-		}
-	}
-	
-    // quits the game if player hits the escape key
-    if (g_abKeyPressed[K_ESCAPE])
-        g_bQuitGame = true;    
 }
 
 //--------------------------------------------------------------
@@ -400,29 +391,102 @@ void render( void )
     std::cout << std::endl;
 
     //render test screen code (not efficient at all)
-    const WORD colors[] =   {
+    /*const WORD colors[] =   {
 	                        0x1A, 0x2B, 0x3C, 0x4D, 0x5E, 0x6F,
 	                        0xA1, 0xB2, 0xC3, 0xD4, 0xE5, 0xF6
 	                        };
+	                        */
 	
-	for (int i = 0; i < 12; ++i)
-	{
-		gotoXY(3*i,i+1);
-		colour(colors[i]);
-		std::cout << "WOW";
-	}
-
-    // render time taken to calculate this frame
-    gotoXY(70, 0);
+gotoXY(p1coordx, p1coordy);
     colour(0x1A);
-    std::cout << 1.0 / g_dDeltaTime << "fps" << std::endl;
+    std::cout << (char)236;
   
-    gotoXY(0, 0);
+     gotoXY(p2coordx, p2coordy);
+    colour(0x2B);
+    std::cout << (char)2;
+
+	if (b1bullet == false)
+		{
+
+		}
+	if (b2bullet == false)
+		{
+
+		}
+	if (b3bullet == false)
+		{
+
+		}
+	if (b4bullet == false)
+		{
+
+		}
+	if (b5bullet == false)
+		{
+
+		}
+	if (b6bullet == false)
+		{
+
+		}
+	if (b7bullet == false)
+		{
+
+		}
+	if (b8bullet == false)
+		{
+
+		}
+	if (b9bullet == false)
+		{
+
+		}
+	if (b10bullet == false)
+		{
+
+		}
+	if (b11bullet == false)
+		{
+
+		}
+	if (b12bullet == false)
+		{
+
+		}
+	if (b13bullet == false)
+		{
+
+		}
+	if (b14bullet == false)
+		{
+
+		}
+	if (b15bullet == false)
+		{
+
+		}
+	if (b16bullet == false)
+		{
+
+		}
+	if (b17bullet == false)
+		{
+
+		}
+	if (b18bullet == false)
+		{
+
+		}
+	if (b19bullet == false)
+		{
+
+		}
+	if (b20bullet == false)
+		{
+
+		}
+
+    gotoXY(0, 25);
     colour(0x59);
     std::cout << g_dElapsedTime << "secs" << std::endl;
-
-    // render character
-    gotoXY(g_cCharLocation);
-    colour(0x0C);
-    std::cout << (char)1;
 }
