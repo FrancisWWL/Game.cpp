@@ -215,32 +215,7 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b2bullet == false)
-		{
-
-		}
-		else if (b2bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b3bullet == false)
-		{
-
-		}
 		else if (b3bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b4bullet == false)
 		{
 
 		}
@@ -248,21 +223,7 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b5bullet == false)
-		{
-
-		}
 		else if (b5bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b6bullet == false)
 		{
 
 		}
@@ -270,21 +231,7 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b7bullet == false)
-		{
-
-		}
 		else if (b7bullet == false)
-		{
-
-		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b8bullet == false)
 		{
 
 		}
@@ -292,25 +239,51 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b9bullet == false)
-		{
-
-		}
 		else if (b9bullet == false)
 		{
 
 		}
-	}
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b10bullet == false)
+		else if (b10bullet == false)
 		{
 
 		}
-		else if (b10bullet == false)
+		else if (b11bullet == false)
+		{
+
+		}
+		else if (b12bullet == false)
+		{
+
+		}
+		else if (b13bullet == false)
+		{
+
+		}
+		else if (b14bullet == false)
+		{
+
+		}
+		else if (b15bullet == false)
+		{
+
+		}
+		else if (b16bullet == false)
+		{
+
+		}
+		else if (b17bullet == false)
+		{
+
+		}
+		else if (b18bullet == false)
+		{
+
+		}
+		else if (b19bullet == false)
+		{
+
+		}
+		else if (b20bullet == false)
 		{
 
 		}
