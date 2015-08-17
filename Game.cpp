@@ -83,26 +83,26 @@ bool boss1autotarget = false;
 //passive
 enum charms
 {
-	
-}
+ none;	
+};
 
 //active
 enum items
 {
-	
-}
+none;	
+};
 
 //active
 enum monsters
 {
-	
-}
+none;	
+};
 
 //active
 enum bosses
 {
 	
-}
+};
 
 
 //--------------------------------------------------------------
@@ -204,31 +204,14 @@ void update(double dt)
 		p1coordx++;
     }
 
-	//Player 2
-	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
-	{
-		p2coordy--;
-	}
-	if (g_abKeyPressed[0x25]) //Arrow Key Left --> Left
-	{
-		p2coordx--;
-	}
-	if (g_abKeyPressed[0x28])	 //Arrow Key Down --> Down
-	{
-		p2coordy++;
-	}
-	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
-	{
-		p2coordx++;
-	} 
-    }
+
 if (g_abKeyPressed[0x56])	//V --> Shoot
 	{
 		if (b1bullet == false)
 		{
 
 		}
-		else if (b1bullet == false)
+		else if (b2bullet == false)
 		{
 
 		}
@@ -333,6 +316,26 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 		}
 	}
 	
+	
+	
+		//Player 2
+	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
+	{
+		p2coordy--;
+	}
+	if (g_abKeyPressed[0x25]) //Arrow Key Left --> Left
+	{
+		p2coordx--;
+	}
+	if (g_abKeyPressed[0x28])	 //Arrow Key Down --> Down
+	{
+		p2coordy++;
+	}
+	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
+	{
+		p2coordx++;
+	} 
+    }
     // quits the game if player hits the escape key
     if (g_abKeyPressed[K_ESCAPE])
         g_bQuitGame = true;    
