@@ -68,13 +68,22 @@ void shutdown( void )
 //--------------------------------------------------------------
 void getInput( void )
 {    
-   	g_abKeyPressed[0x57] = isKeyPressed(0x57); //W --> Up 
+   	//Player 1
+	g_abKeyPressed[0x57] = isKeyPressed(0x57); //W --> Up 
 	g_abKeyPressed[0x41] = isKeyPressed(0x41); //A --> Left
 	g_abKeyPressed[0x53] = isKeyPressed(0x53); //S --> Down
 	g_abKeyPressed[0x44] = isKeyPressed(0x44); //D --> Right
-	g_abKeyPressed[0x4A] = isKeyPressed(0x4A); //J --> Shoot
-	g_abKeyPressed[0x4B] = isKeyPressed(0x4B); //K --> Item
-	g_abKeyPressed[0x4C] = isKeyPressed(0x4C); //L --> Bomb
+	g_abKeyPressed[0x56] = isKeyPressed(0x56); //V --> Shoot
+	g_abKeyPressed[0x42] = isKeyPressed(0x42); //B --> Item
+	g_abKeyPressed[0x4E] = isKeyPressed(0x4E); //N --> Bomb
+	//Player 2
+	g_abKeyPressed[0x26] = isKeyPressed(0x26); //Arrow Key Up --> Up 
+	g_abKeyPressed[0x25] = isKeyPressed(0x25); //Arrow Key Left --> Left
+	g_abKeyPressed[0x28] = isKeyPressed(0x28); //Arrow Key Down --> Down
+	g_abKeyPressed[0x27] = isKeyPressed(0x27); //Arrow Key Right --> Right
+	g_abKeyPressed[0x49] = isKeyPressed(0x49); //I --> Shoot
+	g_abKeyPressed[0x4F] = isKeyPressed(0x4F); //O --> Item
+	g_abKeyPressed[0x50] = isKeyPressed(0x50); //P --> Bomb
 }
 
 //--------------------------------------------------------------
