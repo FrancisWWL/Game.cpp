@@ -186,25 +186,41 @@ void update(double dt)
 
     // Updating the location of the character based on the key press
 	// providing a beep sound whenver we shift the character
-    if (g_abKeyPressed[K_UP] && g_cCharLocation.Y > 0)
+    	//Player 1
+    if (g_abKeyPressed[0x57])	//W --> Up
     {
-        Beep(1440, 30);
-        g_cCharLocation.Y--; 
+		p1coordy--;
     }
-    if (g_abKeyPressed[K_LEFT] && g_cCharLocation.X > 0)
+    if (g_abKeyPressed[0x41]) //A --> Left
     {
-        Beep(1440, 30);
-        g_cCharLocation.X--; 
+		p1coordx--;
     }
-    if (g_abKeyPressed[K_DOWN] && g_cCharLocation.Y < g_cConsoleSize.Y - 1)
+    if (g_abKeyPressed[0x53])	 //S --> Down
     {
-        Beep(1440, 30);
-        g_cCharLocation.Y++; 
+		p1coordy++;
     }
-    if (g_abKeyPressed[K_RIGHT] && g_cCharLocation.X < g_cConsoleSize.X - 1)
+    if (g_abKeyPressed[0x44])	//D --> Right
     {
-        Beep(1440, 30);
-        g_cCharLocation.X++; 
+		p1coordx++;
+    }
+
+	//Player 2
+	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
+	{
+		p1coordy--;
+	}
+	if (g_abKeyPressed[0x25]) //Arrow Key Left --> Left
+	{
+		p1coordx--;
+	}
+	if (g_abKeyPressed[0x28])	 //Arrow Key Down --> Down
+	{
+		p1coordy++;
+	}
+	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
+	{
+		p1coordx++;
+	} 
     }
 
     // quits the game if player hits the escape key
