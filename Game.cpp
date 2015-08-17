@@ -17,6 +17,11 @@ double	g_dElapsedTime;
 double	g_dDeltaTime;
 bool	g_abKeyPressed[K_COUNT];
 COORD	g_cConsoleSize;
+int map1[10][10];
+int map2[10][10];
+int map3[10][10];
+int map4[10][10];
+int layout[79][28];
 
 //p1 data
 int p1heart,p1coordx,p1coordy;
@@ -83,26 +88,26 @@ bool boss1autotarget = false;
 //passive
 enum charms
 {
- //none,	
-};
+	
+}
 
 //active
 enum items
 {
-//none,
-};
+	
+}
 
 //active
 enum monsters
 {
-//none,	
-};
+	
+}
 
 //active
 enum bosses
 {
 	
-};
+}
 
 
 //--------------------------------------------------------------
@@ -128,6 +133,29 @@ void init( void )
     GetConsoleScreenBufferInfo( GetStdHandle( STD_OUTPUT_HANDLE ), &csbi );
     g_cConsoleSize.X = csbi.srWindow.Right + 1;
     g_cConsoleSize.Y = csbi.srWindow.Bottom + 1;
+    
+    for(int i=0;i<79;++i)
+    {
+        for(int j=0;j<24;++j)
+        {
+            layout[i][j]=0;
+        }
+    }
+
+    for(int i=0;i<79;++i)
+    {
+        layout[i][0]=1;
+    }
+    for(int i=0;i<24;++i)
+    {
+       layout[0][i]=1;
+        
+       layout[78][i]=1;
+    }
+    for(int i=0;i<79;++i)
+    {
+         layout[i][23]=1;
+    }
 
    p1coordx = 10; 
    p1coordy = 10;
@@ -204,58 +232,7 @@ void update(double dt)
 		p1coordx++;
     }
 
-
-if (g_abKeyPressed[0x56])	//V --> Shoot
-	{
-		if (b1bullet == false)
-		{
-
-		}
-		else if (b2bullet == false)
-		{
-
-		}
-		else if (b3bullet == false)
-		{
-
-		}
-		else if (b4bullet == false)
-		{
-
-		}
-		else if (b5bullet == false)
-		{
-
-		}
-		else if (b6bullet == false)
-		{
-
-		}
-		else if (b7bullet == false)
-		{
-
-		}
-		else if (b8bullet == false)
-		{
-
-		}
-		else if (b9bullet == false)
-		{
-
-		}
-		else if (b10bullet == false)
-		{
-
-		}
-		else
-		{
-			//no effects
-		}
-	}
-	
-	
-	
-		//Player 2
+	//Player 2
 	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
 	{
 		p2coordy--;
@@ -271,55 +248,122 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
 	{
 		p2coordx++;
-	}
-
-	if (g_abKeyPressed[0x56])	//V --> Shoot
+	} 
+    }
+if (g_abKeyPressed[0x56])	//V --> Shoot
 	{
-		if (b11bullet == false)
+		if (b1bullet == false)
 		{
 
 		}
-		else if (b12bullet == false)
+		else if (b1bullet == false)
 		{
 
-		}
-		else if (b13bullet == false)
-		{
-
-		}
-		else if (b14bullet == false)
-		{
-
-		}
-		else if (b15bullet == false)
-		{
-
-		}
-		else if (b16bullet == false)
-		{
-
-		}
-		else if (b17bullet == false)
-		{
-
-		}
-		else if (b18bullet == false)
-		{
-
-		}
-		else if (b19bullet == false)
-		{
-
-		}
-		else if (b20bullet == false)
-		{
-
-		}
-		else
-		{
-			//no effects
 		}
 	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b2bullet == false)
+		{
+
+		}
+		else if (b2bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b3bullet == false)
+		{
+
+		}
+		else if (b3bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b4bullet == false)
+		{
+
+		}
+		else if (b4bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b5bullet == false)
+		{
+
+		}
+		else if (b5bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b6bullet == false)
+		{
+
+		}
+		else if (b6bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b7bullet == false)
+		{
+
+		}
+		else if (b7bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b8bullet == false)
+		{
+
+		}
+		else if (b8bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b9bullet == false)
+		{
+
+		}
+		else if (b9bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b10bullet == false)
+		{
+
+		}
+		else if (b10bullet == false)
+		{
+
+		}
+	}
+	
+    // quits the game if player hits the escape key
+    if (g_abKeyPressed[K_ESCAPE])
+        g_bQuitGame = true;    
 }
 
 //--------------------------------------------------------------
@@ -334,104 +378,51 @@ void render( void )
     cls();
 
     //render the game
+     for(int i=0;i<79;++i)
+    {
+        std::cout<< "*";
+    }
+    std::cout << std::endl;
+    for(int i=0;i<22;++i)
+    {
+        std::cout<<"*";
+        for(int k=0;k<77;++k)
+        {
+            std::cout<< " ";
+        }
+        std::cout << "*";
+        std::cout << std::endl;
+    }
+    for(int i=0;i<79;++i)
+    {
+        std::cout<<"*";
+    }
+    std::cout << std::endl;
 
     //render test screen code (not efficient at all)
     const WORD colors[] =   {
 	                        0x1A, 0x2B, 0x3C, 0x4D, 0x5E, 0x6F,
 	                        0xA1, 0xB2, 0xC3, 0xD4, 0xE5, 0xF6
 	                        };
+	
+	for (int i = 0; i < 12; ++i)
+	{
+		gotoXY(3*i,i+1);
+		colour(colors[i]);
+		std::cout << "WOW";
+	}
 
-    gotoXY(p1coordx, p1coordy);
+    // render time taken to calculate this frame
+    gotoXY(70, 0);
     colour(0x1A);
-    std::cout << (char)1;
+    std::cout << 1.0 / g_dDeltaTime << "fps" << std::endl;
   
-     gotoXY(p2coordx, p2coordy);
-    colour(0x2B);
-    std::cout << (char)2;
-
-	if (b1bullet == false)
-		{
-
-		}
-	if (b2bullet == false)
-		{
-
-		}
-	if (b3bullet == false)
-		{
-
-		}
-	if (b4bullet == false)
-		{
-
-		}
-	if (b5bullet == false)
-		{
-
-		}
-	if (b6bullet == false)
-		{
-
-		}
-	if (b7bullet == false)
-		{
-
-		}
-	if (b8bullet == false)
-		{
-
-		}
-	if (b9bullet == false)
-		{
-
-		}
-	if (b10bullet == false)
-		{
-
-		}
-	if (b11bullet == false)
-		{
-
-		}
-	if (b12bullet == false)
-		{
-
-		}
-	if (b13bullet == false)
-		{
-
-		}
-	if (b14bullet == false)
-		{
-
-		}
-	if (b15bullet == false)
-		{
-
-		}
-	if (b16bullet == false)
-		{
-
-		}
-	if (b17bullet == false)
-		{
-
-		}
-	if (b18bullet == false)
-		{
-
-		}
-	if (b19bullet == false)
-		{
-
-		}
-	if (b20bullet == false)
-		{
-
-		}
-
-    gotoXY(0, 25);
+    gotoXY(0, 0);
     colour(0x59);
     std::cout << g_dElapsedTime << "secs" << std::endl;
-    
+
+    // render character
+    gotoXY(g_cCharLocation);
+    colour(0x0C);
+    std::cout << (char)1;
 }
