@@ -83,19 +83,19 @@ bool boss1autotarget = false;
 //passive
 enum charms
 {
- none;	
+ //none,	
 };
 
 //active
 enum items
 {
-none;	
+//none,
 };
 
 //active
 enum monsters
 {
-none;	
+//none,	
 };
 
 //active
@@ -247,7 +247,35 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 		{
 
 		}
-		else if (b11bullet == false)
+		else
+		{
+			//no effects
+		}
+	}
+	
+	
+	
+		//Player 2
+	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
+	{
+		p2coordy--;
+	}
+	if (g_abKeyPressed[0x25]) //Arrow Key Left --> Left
+	{
+		p2coordx--;
+	}
+	if (g_abKeyPressed[0x28])	 //Arrow Key Down --> Down
+	{
+		p2coordy++;
+	}
+	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
+	{
+		p2coordx++;
+	}
+
+	if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b11bullet == false)
 		{
 
 		}
@@ -287,31 +315,11 @@ if (g_abKeyPressed[0x56])	//V --> Shoot
 		{
 
 		}
+		else
+		{
+			//no effects
+		}
 	}
-	
-	
-	
-		//Player 2
-	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
-	{
-		p2coordy--;
-	}
-	if (g_abKeyPressed[0x25]) //Arrow Key Left --> Left
-	{
-		p2coordx--;
-	}
-	if (g_abKeyPressed[0x28])	 //Arrow Key Down --> Down
-	{
-		p2coordy++;
-	}
-	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
-	{
-		p2coordx++;
-	} 
-    }
-    // quits the game if player hits the escape key
-    if (g_abKeyPressed[K_ESCAPE])
-        g_bQuitGame = true;    
 }
 
 //--------------------------------------------------------------
@@ -332,25 +340,98 @@ void render( void )
 	                        0x1A, 0x2B, 0x3C, 0x4D, 0x5E, 0x6F,
 	                        0xA1, 0xB2, 0xC3, 0xD4, 0xE5, 0xF6
 	                        };
-	
-	for (int i = 0; i < 12; ++i)
-	{
-		gotoXY(3*i,i+1);
-		colour(colors[i]);
-		std::cout << "WOW";
-	}
 
-    // render time taken to calculate this frame
-    gotoXY(70, 0);
+    gotoXY(p1coordx, p1coordy);
     colour(0x1A);
-    std::cout << 1.0 / g_dDeltaTime << "fps" << std::endl;
+    std::cout << (char)1;
   
-    gotoXY(0, 0);
+     gotoXY(p2coordx, p2coordy);
+    colour(0x2B);
+    std::cout << (char)2;
+
+	if (b1bullet == false)
+		{
+
+		}
+	if (b2bullet == false)
+		{
+
+		}
+	if (b3bullet == false)
+		{
+
+		}
+	if (b4bullet == false)
+		{
+
+		}
+	if (b5bullet == false)
+		{
+
+		}
+	if (b6bullet == false)
+		{
+
+		}
+	if (b7bullet == false)
+		{
+
+		}
+	if (b8bullet == false)
+		{
+
+		}
+	if (b9bullet == false)
+		{
+
+		}
+	if (b10bullet == false)
+		{
+
+		}
+	if (b11bullet == false)
+		{
+
+		}
+	if (b12bullet == false)
+		{
+
+		}
+	if (b13bullet == false)
+		{
+
+		}
+	if (b14bullet == false)
+		{
+
+		}
+	if (b15bullet == false)
+		{
+
+		}
+	if (b16bullet == false)
+		{
+
+		}
+	if (b17bullet == false)
+		{
+
+		}
+	if (b18bullet == false)
+		{
+
+		}
+	if (b19bullet == false)
+		{
+
+		}
+	if (b20bullet == false)
+		{
+
+		}
+
+    gotoXY(0, 25);
     colour(0x59);
     std::cout << g_dElapsedTime << "secs" << std::endl;
-
-    // render character
-    gotoXY(g_cCharLocation);
-    colour(0x0C);
-    std::cout << (char)1;
+    
 }
