@@ -222,7 +222,117 @@ void update(double dt)
 		p2coordx++;
 	} 
     }
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b1bullet == false)
+		{
 
+		}
+		else if (b1bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b2bullet == false)
+		{
+
+		}
+		else if (b2bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b3bullet == false)
+		{
+
+		}
+		else if (b3bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b4bullet == false)
+		{
+
+		}
+		else if (b4bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b5bullet == false)
+		{
+
+		}
+		else if (b5bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b6bullet == false)
+		{
+
+		}
+		else if (b6bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b7bullet == false)
+		{
+
+		}
+		else if (b7bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b8bullet == false)
+		{
+
+		}
+		else if (b8bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b9bullet == false)
+		{
+
+		}
+		else if (b9bullet == false)
+		{
+
+		}
+	}
+if (g_abKeyPressed[0x56])	//V --> Shoot
+	{
+		if (b10bullet == false)
+		{
+
+		}
+		else if (b10bullet == false)
+		{
+
+		}
+	}
+	
     // quits the game if player hits the escape key
     if (g_abKeyPressed[K_ESCAPE])
         g_bQuitGame = true;    
