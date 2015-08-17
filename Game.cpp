@@ -207,19 +207,19 @@ void update(double dt)
 	//Player 2
 	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
 	{
-		p1coordy--;
+		p2coordy--;
 	}
 	if (g_abKeyPressed[0x25]) //Arrow Key Left --> Left
 	{
-		p1coordx--;
+		p2coordx--;
 	}
 	if (g_abKeyPressed[0x28])	 //Arrow Key Down --> Down
 	{
-		p1coordy++;
+		p2coordy++;
 	}
 	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
 	{
-		p1coordx++;
+		p2coordx++;
 	} 
     }
 
