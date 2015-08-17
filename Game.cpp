@@ -18,64 +18,66 @@ double	g_dDeltaTime;
 bool	g_abKeyPressed[K_COUNT];
 COORD	g_cConsoleSize;
 
-/p1 data
-int p1heart;p1coordx;p1coordy;
+//p1 data
+int p1heart,p1coordx,p1coordy;
+//p2 data
+int p2heart,p2coordx,p2coordy;
 
 //bullet(20)
-int b1directx;b1directy;b1coordx;b1coordy;
-int b2directx;b2directy;b2coordx;b2coordy;
-int b3directx;b3directy;b3coordx;b3coordy;
-int b4directx;b4directy;b4coordx;b4coordy;
-int b5directx;b5directy;b5coordx;b5coordy;
-int b6directx;b6directy;b6coordx;b6coordy;
-int b7directx;b7directy;b7coordx;b7coordy;
-int b8directx;b8directy;b8coordx;b8coordy;
-int b9directx;b9directy;b9coordx;b9coordy;
-int b10directx;b10directy;b10coordx;b10coordy;
-int b11directx;b11directy;b11coordx;b11coordy;
-int b12directx;b12directy;b12coordx;b12coordy;
-int b13directx;b13directy;b13coordx;b13coordy;
-int b14directx;b14directy;b14coordx;b14coordy;
-int b15directx;b15directy;b15coordx;b15coordy;
-int b16directx;b16directy;b16coordx;b16coordy;
-int b17directx;b17directy;b17coordx;b17coordy;
-int b18directx;b18directy;b18coordx;b18coordy;
-int b19directx;b19directy;b19coordx;b19coordy;
-int b20directx;b20directy;b20coordx;b20coordy;
-bool b1autotarget = false ;b1bullet = false;
-bool b2autotarget = false ;b2bullet = false;
-bool b3autotarget = false ;b3bullet = false;
-bool b4autotarget = false ;b4bullet = false;
-bool b5autotarget = false ;b5bullet = false;
-bool b6autotarget = false ;b6bullet = false;
-bool b7autotarget = false ;b7bullet = false;
-bool b8autotarget = false ;b8bullet = false;
-bool b9autotarget = false ;b9bullet = false;
-bool b10autotarget = false ;b10bullet = false;
-bool b11autotarget = false ;b11bullet = false;
-bool b12autotarget = false ;b12bullet = false;
-bool b13autotarget = false ;b13bullet = false;
-bool b14autotarget = false ;b14bullet = false;
-bool b15autotarget = false ;b15bullet = false;
-bool b16autotarget = false ;b16bullet = false;
-bool b17autotarget = false ;b17bullet = false;
-bool b18autotarget = false ;b18bullet = false;
-bool b19autotarget = false ;b19bullet = false;
-bool b20autotarget = false ;b20bullet = false;
+int b1directx,b1directy,b1coordx,b1coordy;
+int b2directx,b2directy,b2coordx,b2coordy;
+int b3directx,b3directy,b3coordx,b3coordy;
+int b4directx,b4directy,b4coordx,b4coordy;
+int b5directx,b5directy,b5coordx,b5coordy;
+int b6directx,b6directy,b6coordx,b6coordy;
+int b7directx,b7directy,b7coordx,b7coordy;
+int b8directx,b8directy,b8coordx,b8coordy;
+int b9directx,b9directy,b9coordx,b9coordy;
+int b10directx,b10directy,b10coordx,b10coordy;
+int b11directx,b11directy,b11coordx,b11coordy;
+int b12directx,b12directy,b12coordx,b12coordy;
+int b13direct,b13directy,b13coordx,b13coordy;
+int b14directx,b14directy,b14coordx,b14coordy;
+int b15directx,b15directy,b15coordx,b15coordy;
+int b16directx,b16directy,b16coordx,b16coordy;
+int b17directx,b17directy,b17coordx,b17coordy;
+int b18directx,b18directy,b18coordx,b18coordy;
+int b19directx,b19directy,b19coordx,b19coordy;
+int b20directx,b20directy,b20coordx,b20coordy;
+bool b1autotarget = false,b1bullet = false;
+bool b2autotarget = false,b2bullet = false;
+bool b3autotarget = false,b3bullet = false;
+bool b4autotarget = false,b4bullet = false;
+bool b5autotarget = false,b5bullet = false;
+bool b6autotarget = false,b6bullet = false;
+bool b7autotarget = false,b7bullet = false;
+bool b8autotarget = false,b8bullet = false;
+bool b9autotarget = false,b9bullet = false;
+bool b10autotarget = false,b10bullet = false;
+bool b11autotarget = false,b11bullet = false;
+bool b12autotarget = false,b12bullet = false;
+bool b13autotarget = false,b13bullet = false;
+bool b14autotarget = false,b14bullet = false;
+bool b15autotarget = false,b15bullet = false;
+bool b16autotarget = false,b16bullet = false;
+bool b17autotarget = false,b17bullet = false;
+bool b18autotarget = false,b18bullet = false;
+bool b19autotarget = false,b19bullet = false;
+bool b20autotarget = false,b20bullet = false;
 
 //monster(4)
-int m1heart;m1coordx;m1coordy;
-int m2heart;m2coordx;m2coordy;
-int m3heart;m3coordx;m3coordy;
-int m4heart;m4coordx;m4coordy;
+int m1heart,m1coordx,m1coordy;
+int m2heart,m2coordx,m2coordy;
+int m3heart,m3coordx,m3coordy;
+int m4heart,m4coordx,m4coordy;
 bool m1autotarget = false;
 bool m2autotarget = false;
 bool m3autotarget = false;
 bool m4autotarget = false;
 
 //bosses(1)
-int boss1heart;boss1coordx;bosscoordy;
-int bossb1bullet;bossb1directx;bossb1directy;bossb1coordx;bossb1coordy;
+int boss1heart,boss1coordx,bosscoordy;
+int bossb1bullet,bossb1directx,bossb1directy,bossb1coordx,bossb1coordy;
 bool boss1autotarget = false;
 
 //passive
@@ -127,32 +129,10 @@ void init( void )
     g_cConsoleSize.X = csbi.srWindow.Right + 1;
     g_cConsoleSize.Y = csbi.srWindow.Bottom + 1;
 
-    // set the character to be in the center of the screen.
-    g_cCharLocation.X = g_cConsoleSize.X / 2;
-    g_cCharLocation.Y = g_cConsoleSize.Y / 2;
-    //map
-    for(int i=0;i<79;++i)
-    {
-        for(int j=0;j<24;++j)
-        {
-            layout[i][j]=0;
-        }
-    }
-
-    for(int i=0;i<79;++i)
-    {
-        layout[i][0]=1;
-    }
-    for(int i=0;i<24;++i)
-    {
-       layout[0][i]=1;
-        
-       layout[78][i]=1;
-    }
-    for(int i=0;i<79;++i)
-    {
-         layout[i][23]=1;
-    }
+   p1coordx = 10; 
+   p1coordy = 10;
+    p2coordx = 11;
+    p2coordy = 11;
 
     g_dElapsedTime = 0.0;
 }
@@ -206,36 +186,42 @@ void update(double dt)
 
     // Updating the location of the character based on the key press
 	// providing a beep sound whenver we shift the character
-    if (g_abKeyPressed[K_UP] && g_cCharLocation.Y > 0)
+    	//Player 1
+    if (g_abKeyPressed[0x57])	//W --> Up
     {
-        Beep(1440, 30);
-        g_cCharLocation.Y--;
-        Ycheck = 1;
+		p1coordy--;
     }
-    if (g_abKeyPressed[K_LEFT] && g_cCharLocation.X > 0)
+    if (g_abKeyPressed[0x41]) //A --> Left
     {
-        Beep(1440, 30);
-        g_cCharLocation.X--; 
-        Xcheck = 1;
+		p1coordx--;
     }
-    if (g_abKeyPressed[K_DOWN] && g_cCharLocation.Y < g_cConsoleSize.Y - 1)
+    if (g_abKeyPressed[0x53])	 //S --> Down
     {
-        Beep(1440, 30);
-        g_cCharLocation.Y++; 
-        Ycheck = -1;
+		p1coordy++;
     }
-    if (g_abKeyPressed[K_RIGHT] && g_cCharLocation.X < g_cConsoleSize.X - 1)
+    if (g_abKeyPressed[0x44])	//D --> Right
     {
-        Beep(1440, 30);
-        g_cCharLocation.X++; 
-        Xcheck = -1;
+		p1coordx++;
     }
-    //collision
-   if(layout[g_cCharLocation.X][g_cCharLocation.Y]==1)
-   {
-       g_cCharLocation.X = g_cCharLocation.X + Xcheck;
-       g_cCharLocation.Y = g_cCharLocation.Y + Ycheck;
-   }
+
+	//Player 2
+	if (g_abKeyPressed[0x26])	//Arrow Key Up --> Up
+	{
+		p1coordy--;
+	}
+	if (g_abKeyPressed[0x25]) //Arrow Key Left --> Left
+	{
+		p1coordx--;
+	}
+	if (g_abKeyPressed[0x28])	 //Arrow Key Down --> Down
+	{
+		p1coordy++;
+	}
+	if (g_abKeyPressed[0x27])	//Arrow Key Right --> Right
+	{
+		p1coordx++;
+	} 
+    }
 
     // quits the game if player hits the escape key
     if (g_abKeyPressed[K_ESCAPE])
@@ -254,26 +240,7 @@ void render( void )
     cls();
 
     //render the game
-    for(int i=0;i<79;++i)
-    {
-        std::cout<< "*";
-    }
-    std::cout << std::endl;
-    for(int i=0;i<22;++i)
-    {
-        std::cout<<"*";
-        for(int k=0;k<77;++k)
-        {
-            std::cout<< " ";
-        }
-        std::cout << "*";
-        std::cout << std::endl;
-    }
-    for(int i=0;i<79;++i)
-    {
-        std::cout<<"*";
-    }
-    std::cout << std::endl;
+
     //render test screen code (not efficient at all)
     const WORD colors[] =   {
 	                        0x1A, 0x2B, 0x3C, 0x4D, 0x5E, 0x6F,
