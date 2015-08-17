@@ -16,8 +16,92 @@ git push -u origin master
 double	g_dElapsedTime;
 double	g_dDeltaTime;
 bool	g_abKeyPressed[K_COUNT];
-COORD	g_cCharLocation;
 COORD	g_cConsoleSize;
+
+/p1 data
+int p1heart;p1coordx;p1coordy;
+
+//bullet(20)
+int b1directx;b1directy;b1coordx;b1coordy;
+int b2directx;b2directy;b2coordx;b2coordy;
+int b3directx;b3directy;b3coordx;b3coordy;
+int b4directx;b4directy;b4coordx;b4coordy;
+int b5directx;b5directy;b5coordx;b5coordy;
+int b6directx;b6directy;b6coordx;b6coordy;
+int b7directx;b7directy;b7coordx;b7coordy;
+int b8directx;b8directy;b8coordx;b8coordy;
+int b9directx;b9directy;b9coordx;b9coordy;
+int b10directx;b10directy;b10coordx;b10coordy;
+int b11directx;b11directy;b11coordx;b11coordy;
+int b12directx;b12directy;b12coordx;b12coordy;
+int b13directx;b13directy;b13coordx;b13coordy;
+int b14directx;b14directy;b14coordx;b14coordy;
+int b15directx;b15directy;b15coordx;b15coordy;
+int b16directx;b16directy;b16coordx;b16coordy;
+int b17directx;b17directy;b17coordx;b17coordy;
+int b18directx;b18directy;b18coordx;b18coordy;
+int b19directx;b19directy;b19coordx;b19coordy;
+int b20directx;b20directy;b20coordx;b20coordy;
+bool b1autotarget;b1bullet;
+bool b2autotarget;b2bullet;
+bool b3autotarget;b3bullet;
+bool b4autotarget;b4bullet;
+bool b5autotarget;b5bullet;
+bool b6autotarget;b6bullet;
+bool b7autotarget;b7bullet;
+bool b8autotarget;b8bullet;
+bool b9autotarget;b9bullet;
+bool b10autotarget;b10bullet;
+bool b11autotarget;b11bullet;
+bool b12autotarget;b12bullet;
+bool b13autotarget;b13bullet;
+bool b14autotarget;b14bullet;
+bool b15autotarget;b15bullet;
+bool b16autotarget;b16bullet;
+bool b17autotarget;b17bullet;
+bool b18autotarget;b18bullet;
+bool b19autotarget;b19bullet;
+bool b20autotarget;b20bullet;
+
+//monster(4)
+int m1heart;m1coordx;m1coordy;
+int m2heart;m2coordx;m2coordy;
+int m3heart;m3coordx;m3coordy;
+int m4heart;m4coordx;m4coordy;
+bool m1autotarget;
+bool m2autotarget;
+bool m3autotarget;
+bool m4autotarget;
+
+//bosses(1)
+int boss1heart;boss1coordx;bosscoordy;
+int bossb1bullet;bossb1directx;bossb1directy;bossb1coordx;bossb1coordy;
+bool boss1autotarget;
+
+//passive
+enum charms
+{
+	
+}
+
+//active
+enum items
+{
+	
+}
+
+//active
+enum monsters
+{
+	
+}
+
+//active
+enum bosses
+{
+	
+}
+
 
 //--------------------------------------------------------------
 // Purpose	: Initialisation function
